@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+}
+
+.player1::before,
+.player2::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.player1::before {
+  background-color: red;
+}
+
+.player2::before {
+  background-color: yellow;
+}
